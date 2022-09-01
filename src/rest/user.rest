@@ -1,0 +1,24 @@
+
+@api = http://localhost:3000/
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoxNjYxNDY2MzgzNjYxLCJpYXQiOjE2NjE0NjYzODMsImV4cCI6MTY2MTQ2OTk4M30.B_Xynmq9w47ltuVJV5ZLaXBYUnUMyQyiuL7mqpQMrwo
+
+###
+GET {{api}}user
+token: {{token}}
+###
+
+PUT {{api}}user
+Content-Type: application/json
+token: {{token}}
+
+{
+    "id": 7,
+    "name": "Javier",
+    "lastname": "Castelblanco",
+    "email": "ejcastelg@gmail.com",
+    "password": "12345"
+}
+###
+
+DELETE {{api}}user/14
+token: {{token}}
