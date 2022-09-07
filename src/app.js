@@ -10,7 +10,7 @@ app.set("port", process.env.PORT || 3000);
 //Middleware
 app.use(express.json())
    .use(express.urlencoded({ extended: true }))
-   .use(cors({ origin: "http://localhost:5173" }));
+   .use(cors({ origin: "https://notas-castel.netlify.app" }));
 
 //Routers
 app.use("/user", require("./router/user"))
