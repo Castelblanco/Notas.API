@@ -1,6 +1,6 @@
 
 @api = http://localhost:3000/
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoxNjYxNDY2MzgzNjYxLCJpYXQiOjE2NjE0NjYzODMsImV4cCI6MTY2MTQ2OTk4M30.B_Xynmq9w47ltuVJV5ZLaXBYUnUMyQyiuL7mqpQMrwo
+@token = 
 
 ###
 POST {{api}}auth/signup
@@ -18,7 +18,7 @@ POST {{api}}auth/signin
 Content-Type: application/json
 
 {
-    "email": "ejcastelg@gmail.com",
+    "email": "jhon@gmail.com",
     "password": "12345"
 }
 ###

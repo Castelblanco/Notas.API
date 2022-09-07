@@ -10,7 +10,7 @@ app.set("port", process.env.PORT || 3000);
 //Middleware
 app.use(express.json())
    .use(express.urlencoded({ extended: true }))
-   .use(cors({ origin: "http://localhost:3001" }));
+   .use(cors({ origin: "http://localhost:5173" }));
 
 //Routers
 app.use("/user", require("./router/user"))

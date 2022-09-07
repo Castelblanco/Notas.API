@@ -13,7 +13,7 @@ exports.signup = async (req, res)=>{
         
         req.body.id = newUser.insertId;
         req.body.token = jwt.sign({data: Date.now()}, process.env.SECRET_TOKEN, {
-            expiresIn: "10s"
+            expiresIn: "1h"
         });
 
         delete req.body.password;
@@ -30,7 +30,7 @@ exports.signin = async (req, res)=>{
           user = await db.query("SELECT id, name, lastname, email FROM user WHERE email = ?", [email]);
           
     user[0].token = jwt.sign({data: Date.now()}, process.env.SECRET_TOKEN, {
-        expiresIn: "10s"
+        expiresIn: "1h"
     });
 
     res.json(...user);

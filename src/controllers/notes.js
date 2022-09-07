@@ -4,8 +4,8 @@ const db = require("../database/connect"),
       {format} = require("timeago.js");
 
 exports.getNotes = async (req, res)=>{
-    const { id } = req.params;
-    const notes = await db.query("SELECT n.id, n.title, n.description, i.name AS important, n.created_user, n.created_at FROM notes n left join important i on i.id = n.important WHERE n.created_user = ?", [id]);
+    const { id } = req.params,
+          notes = await db.query("SELECT id, title, description, created_user, important, created_at FROM notes WHERE created_user = ?", [id]);
     
     notes.forEach(v => v.created_at = format(v.created_at, "es_CO"));
 
@@ -14,6 +14,7 @@ exports.getNotes = async (req, res)=>{
 
 exports.postNotes = async (req, res)=>{
     try{
+        req.body.created_at = new Date();
         await db.query("INSERT INTO notes SET ?", [req.body]);
         res.json({success: "Nota Creada"});
     }catch(e){

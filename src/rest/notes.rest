@@ -1,8 +1,8 @@
 @api = http://localhost:3000/
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoxNjYxNDY2MzgzNjYxLCJpYXQiOjE2NjE0NjYzODMsImV4cCI6MTY2MTQ2OTk4M30.B_Xynmq9w47ltuVJV5ZLaXBYUnUMyQyiuL7mqpQMrwo
+@token = 
 
 ###
-GET {{api}}notes/14
+GET {{api}}notes/1
 Content-Type: application/application/application/json
 token: {{token}}
 ###
@@ -12,10 +12,10 @@ Content-Type:  application/json
 token: {{token}}
 
 {
-    "title": "Programar",
-    "description": "terminar Interfaz",
-    "important": 1,
-    "created_user": 9
+    "title": "Front End",
+    "description": "Interfaz",
+    "important": 4,
+    "created_user": 3
 }
 ###
 
